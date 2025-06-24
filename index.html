@@ -9,16 +9,20 @@
     html, body {
       margin: 0;
       padding: env(safe-area-inset);
-      overflow: hidden;
+      height: 100dvh;
       -webkit-touch-callout: none;
       -webkit-tap-highlight-color: transparent;
       font-family: system-ui, sans-serif;
+      overflow: hidden;
     }
 
     body::before {
       content: '';
       position: fixed;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100dvh;
       background-image: url('https://i.pinimg.com/736x/07/6a/bf/076abf8b1eac488e95590cf49ce2dafd.jpg');
       background-size: cover;
       background-position: center;
@@ -27,13 +31,13 @@
     }
   </style>
 </head>
-<body class="h-screen w-screen text-white text-center px-4 flex items-center justify-center relative">
+<body class="w-screen text-white text-center px-4 flex items-center justify-center relative" style="height:100dvh;">
 
   <!-- Centered Content -->
   <div class="flex flex-col items-center space-y-6 w-full max-w-md">
 
     <!-- Logo and Title -->
-    <div class="space-y-2 -mt-6 mb-6">
+    <div class="space-y-2 -mt-14 mb-14">
       <div class="flex justify-center">
         <img src="smucci.png" alt="Smucci Logo" class="h-16 sm:h-20 w-auto drop-shadow-lg">
       </div>
