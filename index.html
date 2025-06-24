@@ -11,27 +11,28 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      background: black;
       font-family: system-ui, sans-serif;
-      -webkit-tap-highlight-color: transparent;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Background always spans full screen */
-    body::before {
-      content: '';
+    .background-wrapper {
       position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .background-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background-image: url('https://i.pinimg.com/736x/83/c9/88/83c9880216480a7de57c12604676d88f.jpg');
       background-size: cover;
       background-position: center;
       filter: blur(8px);
-      z-index: -1;
+      transform: scale(1.05); /* Prevent edge cutoffs */
     }
 
-    /* Only content respects safe-area */
     .safe-wrapper {
       padding-top: env(safe-area-inset-top);
       padding-left: env(safe-area-inset-left);
@@ -42,6 +43,10 @@
 </head>
 <body class="text-white text-center flex items-center justify-center px-4 safe-wrapper">
 
+  <!-- Background -->
+  <div class="background-wrapper"></div>
+
+  <!-- Main Content -->
   <div class="flex flex-col items-center space-y-6 w-full max-w-md">
 
     <!-- Logo and Title -->
@@ -64,7 +69,7 @@
 
     <!-- App Store Badges -->
     <div class="flex justify-center flex-wrap gap-4 pt-4">
-      <a href="https://play.google.com/store/apps/details?id=com.smucci.smuccicustomer&fbclid=PAZXh0bgNhZW0CMTEAAadWfZG0bi94rcPTT28t6qakxTrk0N1m-jNlMIfIONBaAEfdBOoAKMx0ks-qzg_aem_-DCaUtG4uFzY__Ux9yJNng" target="_blank">
+      <a href="https://play.google.com/store/apps/details?id=com.smucci.smuccicustomer" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
       </a>
       <a href="https://apps.apple.com/pk/app/smucci-drop/id6479598697" target="_blank">
