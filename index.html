@@ -9,7 +9,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden; /* Prevent scrolling */
+      overflow: hidden;
     }
 
     body::before {
@@ -24,36 +24,38 @@
     }
   </style>
 </head>
-<body class="min-h-screen flex items-center justify-center text-white text-center px-4">
+<body class="h-screen w-screen text-white text-center px-4 relative">
 
-  <div class="space-y-6 w-full max-w-md">
-    
-    <!-- Title Section with Logo on Top -->
-    <div class="space-y-4">
-      <div class="flex justify-center">
-        <img src="smucci.png" alt="Smucci Logo" class="h-15 sm:h-15 w-auto drop-shadow-lg">
+  <!-- Logo and Title positioned manually -->
+  <div class="absolute top-20 left-0 right-0 space-y-2">
+    <div class="flex justify-center">
+      <img src="smucci.png" alt="Smucci Logo" class="h-16 sm:h-20 w-auto drop-shadow-lg">
+    </div>
+    <h1 class="text-2xl sm:text-3xl font-extrabold drop-shadow-lg">Vape Subscription</h1>
+  </div>
+
+  <!-- Centered Buttons and App Links -->
+  <div class="h-full flex items-center justify-center">
+    <div class="space-y-6 w-full max-w-md">
+      <!-- Buttons -->
+      <div class="space-y-4">
+        <a href="https://your-subscription-link.com" target="_blank" class="block w-full bg-transparent border border-blue-400 text-white py-3 rounded-xl hover:bg-blue-600 hover:bg-opacity-30 transition font-medium shadow-lg">
+          Smucci Vape Subscription
+        </a>
+        <a href="https://instagram.com/smuccivape" target="_blank" class="block w-full bg-transparent border border-pink-400 text-white py-3 rounded-xl hover:bg-pink-500 hover:bg-opacity-30 transition font-medium shadow-lg">
+          Smucci Vape Instagram
+        </a>
       </div>
-      <h1 class="text-2xl sm:text-3xl font-extrabold drop-shadow-lg">Vape Subscription</h1>
-    </div>
 
-    <!-- Buttons -->
-    <div class="space-y-4">
-      <a href="https://your-subscription-link.com" target="_blank" class="block w-full bg-transparent border border-blue-400 text-white py-3 rounded-xl hover:bg-blue-600 hover:bg-opacity-30 transition font-medium shadow-lg">
-        Smucci Vape Subscription
-      </a>
-      <a href="https://instagram.com/smuccivape" target="_blank" class="block w-full bg-transparent border border-pink-400 text-white py-3 rounded-xl hover:bg-pink-500 hover:bg-opacity-30 transition font-medium shadow-lg">
-        Smucci Vape Instagram
-      </a>
-    </div>
-
-    <!-- App Download Section -->
-    <div class="flex justify-center flex-wrap gap-4 pt-4">
-      <a href="https://play.google.com/store/apps/details?id=yourapp" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
-      </a>
-      <a href="https://apps.apple.com/app/yourapp" target="_blank">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12">
-      </a>
+      <!-- App Download Section -->
+      <div class="flex justify-center flex-wrap gap-4 pt-4">
+        <a href="https://play.google.com/store/apps/details?id=yourapp" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12">
+        </a>
+        <a href="https://apps.apple.com/app/yourapp" target="_blank">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12">
+        </a>
+      </div>
     </div>
   </div>
 
