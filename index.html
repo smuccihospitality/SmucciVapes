@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0" />
   <title>Smucci Vape</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent scrolling */
+      width: 1080px;
+      height: 1920px;
+    }
+
     body::before {
       content: '';
       position: fixed;
-      inset: 0;
+      width: 1080px;
+      height: 1920px;
       background-image: url('https://i.pinimg.com/736x/92/f5/7b/92f57be1e4eb8ec4547aa7c01bc68b64.jpg');
       background-size: cover;
       background-position: center;
@@ -18,14 +27,14 @@
     }
   </style>
 </head>
-<body class="min-h-screen flex items-center justify-center text-white text-center px-4">
+<body class="flex items-center justify-center text-white text-center px-4" style="width: 1080px; height: 1920px;">
 
   <div class="space-y-6 w-full max-w-md">
     
     <!-- Title Section with Logo on Top -->
     <div class="space-y-4">
       <div class="flex justify-center">
-        <img src="smucci.png" alt="Smucci Logo" class="h-18 sm:h-18 w-auto drop-shadow-lg">
+        <img src="smucci.png" alt="Smucci Logo" class="h-20 sm:h-28 md:h-32 w-auto drop-shadow-lg">
       </div>
       <h1 class="text-4xl sm:text-5xl font-extrabold drop-shadow-lg">Vape Subscription</h1>
     </div>
